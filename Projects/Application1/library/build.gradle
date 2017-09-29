@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    // Android  网络请求库
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    //加入Retrofit 对Json解析的支持
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    // 添加Retrofit 对RxJava2 的支持
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    //Android OKHttp 网络请求库
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    //OKHttp的网络拦截器
+    compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+    //RxJava 2.1.0
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    //RxAndroid 2.0.1  android 对RxJava 的支持
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    testCompile 'junit:junit:4.12'
+}
