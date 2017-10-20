@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AptDemo.iml" filepath="$PROJECT_DIR$/AptDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.annotation/app.annotation.iml" filepath="$PROJECT_DIR$/app.annotation/app.annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.api/app.api.iml" filepath="$PROJECT_DIR$/app.api/app.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app.complier/app.complier.iml" filepath="$PROJECT_DIR$/app.complier/app.complier.iml" />
     </modules>
   </component>
 </project>
