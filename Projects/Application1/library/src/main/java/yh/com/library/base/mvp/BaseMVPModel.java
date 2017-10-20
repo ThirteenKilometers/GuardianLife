@@ -2,7 +2,6 @@ package yh.com.library.base.mvp;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import yh.com.library.wedgit.net.WrapperRetrofit;
@@ -16,7 +15,7 @@ import yh.com.library.wedgit.net.WrapperRetrofit;
 
 public  abstract  class BaseMVPModel<P extends  BaseMVPPresenter> {
     private  static  final  String TOKEN="token";
-    protected  P mPresenter;
+    protected  P mPresenter; 
     protected WrapperRetrofit retrofit=null;
 
     public BaseMVPModel(P mPresenter) {
