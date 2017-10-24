@@ -18,7 +18,7 @@ public abstract class BaseActivity<P extends IPresenter> extends AutoLayoutActiv
 
     final String TAG = this.getClass().getSimpleName();
 
-    P mPresenter = null;
+   protected P mPresenter = null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
