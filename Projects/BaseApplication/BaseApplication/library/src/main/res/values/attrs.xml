@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><!--通用TitleBar属性-->
+    <declare-styleable name="TitleBar">
+        <!--标题背景色-->
+        <attr name="titleBg" format="color|reference" />
+        <!--title 中间的文字-->
+        <attr name="titleText" format="string" />
+        <!--title 中间的文字大小-->
+        <attr name="titleTextSize" format="dimension" />
+        <!--title 中间的文字-->
+        <attr name="titleTextColor" format="color" />
+
+
+        <!--titlebar 左边的文字-->
+        <attr name="leftTextBackground" format="color|reference" />
+        <!--titlebar 左边的文字-->
+        <attr name="leftText" format="string" />
+        <!--titlebar 左边的文字大小-->
+        <attr name="lefTextSize" format="dimension" />
+        <!--titlebar 左边的文字-->
+        <attr name="leftColor" format="color|reference" />
+        <!--titlebar 左边图标-->
+        <attr name="leftImg" format="reference" />
+
+
+        <!--titlebar 右边是否显示-->
+        <attr name="rightIsShow" format="boolean" />
+        <!--titlebar 右边的文字-->
+        <attr name="rightText" format="string" />
+        <!--titlebar 右边的文字大小-->
+        <attr name="rightTextSize" format="dimension" />
+        <!--titlebar 右边的文字-->
+        <attr name="rightColor" format="color|reference" />
+        <!--titlebae 右边图标-->
+        <attr name="rightImg" format="reference" />
+    </declare-styleable>
+</resources>

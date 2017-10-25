@@ -22,16 +22,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-
     //Android屏幕适配方案，直接填写设计图上的像素尺寸即可完成适配
     compile 'com.zhy:autolayout:1.4.5'
-
     //RxJava 2.1.0
     compile 'io.reactivex.rxjava2:rxjava:2.1.0'
     //RxAndroid 2.0.1  android 对RxJava 的支持
@@ -39,5 +37,12 @@ dependencies {
     //butterknife
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
+    //加入Retrofit网络请求库
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    //加入Retrofit 对Json解析的支持
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // 添加Retrofit 对RxJava2 的支持
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //OkHttp3的网络拦截器
+    compile 'com.squareup.okhttp3:logging-interceptor:3.9.0'
 }

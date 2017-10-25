@@ -1,13 +1,9 @@
 package lzhs.com.baseapplication.mvp.start;
 
-import java.util.concurrent.TimeUnit;
-
-import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.annotations.NonNull;
-import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
+import io.reactivex.Observer;
 import lzhs.com.library.mvp.IModel;
+import lzhs.com.library.utils.data.net.RetrofitClient;
+import okhttp3.ResponseBody;
 
 /**
  * <br/>
@@ -16,7 +12,8 @@ import lzhs.com.library.mvp.IModel;
  * 邮箱：1050629507@qq.com
  */
 class StartModel extends IModel {
-    Observable obsevable=null;
+
+
     @Override
     protected void onCreate() {
 
@@ -28,17 +25,7 @@ class StartModel extends IModel {
 
     }
 
-    public Observable  getDatas(String val) {
-       return Observable.interval(3, 1, TimeUnit.SECONDS)
-                .subscribeOn(Schedulers.io())
-               .unsubscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .map(new Function<Long, String>() {
-                    @Override
-                    public String apply(@NonNull Long aLong) throws Exception {
-                        return "欢欢，这个是延时操作哦";
-                    }
-                });
-
+    public void  getDatas(String val, Observer<ResponseBody> observer) {
+        RetrofitClient.getInstance().get().subscribe(observer);
     }
 }

@@ -9,5 +9,8 @@ import lzhs.com.library.mvp.IView;
  * 邮箱：1050629507@qq.com
  */
 public interface StartView extends IView {
-    void setDatas(String val);
+
+    void getDataSuccess(String json);
+
+    void getDataFaild(String err);
 }

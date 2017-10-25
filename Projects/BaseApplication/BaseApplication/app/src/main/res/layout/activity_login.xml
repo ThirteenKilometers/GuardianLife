@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <lzhs.com.library.widget.views.TitleBar
+        android:layout_width="match_parent"
+        app:titleText="这个是登陆页面啦"
+        app:leftText="左边文字"
+        app:leftColor="#ccc"
+        app:rightText="→_→右边"
+        app:rightColor="#9900fe"
+        app:rightIsShow="true"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/mBtn01"
+            android:layout_width="wrap_content"
+            android:text="获取数据方式一"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/mBtn02"
+            android:layout_width="wrap_content"
+            android:text="获取数据方式2"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/mBtn03"
+            android:layout_width="wrap_content"
+            android:text="获取数据方式3"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -7,10 +7,23 @@
 
 
     <TextView
+        android:id="@+id/mTextShowTitle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="这个是标题唉"
+        android:textSize="30dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc" />
+
+    <TextView
         android:id="@+id/mTextShow"
         android:layout_width="match_parent"
-        android:text=" 该页面为启动页面"
-        android:textSize="30dp"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:layout_height="match_parent" />
+        android:text=" 该页面为启动页面"
+        android:textSize="15dp" />
 </LinearLayout>

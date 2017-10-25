@@ -1,5 +1,6 @@
 package lzhs.com.library.base;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -18,7 +19,9 @@ public abstract class BaseActivity<P extends IPresenter> extends AutoLayoutActiv
 
     final String TAG = this.getClass().getSimpleName();
 
-   protected P mPresenter = null;
+    protected P mPresenter = null;
+
+    protected AlertDialog mDialog=null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -1,10 +1,13 @@
 package lzhs.com.library.mvp;
 
 
+import android.content.Context;
+
 import java.lang.ref.Reference;
 import java.lang.ref.WeakReference;
 
 import lzhs.com.library.base.BaseActivity;
+import lzhs.com.library.base.BaseFragment_V4;
 
 
 public abstract class IPresenter<V extends IView, M extends IModel> implements BaseActivity.ActivityFlow {
@@ -18,10 +21,7 @@ public abstract class IPresenter<V extends IView, M extends IModel> implements B
 
     protected Reference<M> mModel;
 
-    protected IPresenter() {
-        mModel = new WeakReference<M>(createModle());
-        mModel.get().onCreate();
-    }
+    Context mContext=null;
 
     public abstract M createModle();
 
@@ -33,6 +33,13 @@ public abstract class IPresenter<V extends IView, M extends IModel> implements B
      */
     public void attachView(V view) {
         mViewRef = new WeakReference<V>(view);
+        mModel = new WeakReference<M>(createModle());
+        if (mViewRef.get() instanceof BaseActivity)
+            mContext= (Context) mViewRef.get();
+        else if(mViewRef.get() instanceof BaseFragment_V4)
+            mContext=((BaseFragment_V4)mViewRef.get()).getContext();
+        if (mContext!=null)
+        mModel.get().onCreate();
     }
 
 
