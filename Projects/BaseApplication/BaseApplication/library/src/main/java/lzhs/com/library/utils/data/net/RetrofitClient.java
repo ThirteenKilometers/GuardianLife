@@ -47,18 +47,18 @@ public class RetrofitClient {
 
 
     public static RetrofitClient getInstance(String url) {
+        if (!TextUtils.isEmpty(url))
+            baseUrl = url;
         if (sNewInstance == null)
             synchronized (RetrofitClient.class) {
                 if (sNewInstance == null)
-                    sNewInstance = new RetrofitClient(url);
+                    sNewInstance = new RetrofitClient();
             }
         return sNewInstance;
     }
 
 
-    private RetrofitClient(String url) {
-        if (!TextUtils.isEmpty(url))
-            baseUrl = url;
+    private RetrofitClient() {
         okHttpClient = new OkHttpClient.Builder()
                 .addNetworkInterceptor(
                         new HttpLoggingInterceptor(new HttpLoggingInterceptor.Logger() {

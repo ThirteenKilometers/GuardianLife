@@ -1,6 +1,7 @@
 package lzhs.com.baseapplication.mvp.login;
 
 import lzhs.com.library.mvp.IPresenter;
+import lzhs.com.library.utils.data.net.observers.BaseResponse;
 
 /**
  * <br/>
@@ -19,6 +20,18 @@ public class LoginPresenter extends IPresenter<LoginView,LoginModel> {
     }
 
 
+    public void getData01(String s) {
+        BaseResponse observer=new BaseResponse() {
+            @Override
+            protected void onSuccess(String json) {
 
+            }
 
+            @Override
+            protected void onFaild(String err) {
+
+            }
+        };
+
+    }
 }

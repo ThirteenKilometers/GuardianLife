@@ -47,6 +47,9 @@ public abstract class BaseResponse implements Observer<ResponseBody> {
             mDisposable.dispose();
     }
 
+    public void dispose(){
+        if (mDisposable != null&&mDisposable.isDisposed()) mDisposable.dispose();
+    }
     /**
      * 该方法成功的时候调用
      *

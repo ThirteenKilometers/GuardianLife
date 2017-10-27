@@ -29,4 +29,10 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
     public LoginPresenter onCreatePresenter() {
         return new LoginPresenter();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mPresenter.getData01("https://github.com/ThirteenKilometers/GuardianLife/commits/master");
+    }
 }
