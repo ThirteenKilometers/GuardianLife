@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BaseApplication</string>
+    <string name="string_menu_title">屏频互动</string>
 </resources>

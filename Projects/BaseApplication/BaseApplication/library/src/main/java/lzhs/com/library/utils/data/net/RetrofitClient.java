@@ -35,7 +35,7 @@ public class RetrofitClient {
     private OkHttpClient okHttpClient;
 
     public static String baseUrl = BaseApiService.Base_URL;
-
+ 
     private static volatile RetrofitClient sNewInstance = null;
 
     public static Retrofit mRetrofit = null;

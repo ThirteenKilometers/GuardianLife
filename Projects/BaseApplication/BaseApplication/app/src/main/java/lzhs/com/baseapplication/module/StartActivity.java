@@ -9,6 +9,8 @@ import android.support.annotation.Nullable;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import java.util.concurrent.TimeUnit;
@@ -56,10 +58,20 @@ public class StartActivity extends BaseActivity<StartPresenter> implements Start
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setNoTitle();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         ButterKnife.bind(this);
 
+    }
+
+    private void setNoTitle() {
+    /*set it to be no title*/
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        /*set it to be full screen*/
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     @Override

@@ -8,5 +8,7 @@ import android.support.v4.app.Fragment;
  * 时间： 2017/10/25 13:50<br/>
  * 邮箱：1050629507@qq.com
  */
-public class BaseFragment_V4 extends Fragment {
+public abstract class BaseFragment_V4 extends Fragment {
+   final String TAG=this.getClass().getSimpleName();
+
 }

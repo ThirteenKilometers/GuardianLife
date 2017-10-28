@@ -41,7 +41,7 @@ public class TitleBar extends FrameLayout {
     /**
      * 状态栏的背景色
      */
-    private Drawable mTitleBarBg = new ColorDrawable(ContextCompat.getColor(getContext(),R.color.statusColor));
+    private Drawable mTitleBarBg = new ColorDrawable(ContextCompat.getColor(getContext(),R.color.colorPrimary_));
 
     private String mTitleText = "";
 

@@ -21,6 +21,8 @@
         </activity>
         <!--该页面用户登陆页面-->
         <activity android:name=".module.login.LoginActivity"/>
+        <!--该页面用户菜单页面-->
+        <activity android:name=".module.menu.MenuActivity"/>
     </application>
 
 </manifest>

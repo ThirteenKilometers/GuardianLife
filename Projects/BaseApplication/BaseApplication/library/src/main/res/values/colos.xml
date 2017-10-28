@@ -3,6 +3,15 @@
 
     <color name="textColor01">@android:color/white</color>
 
+    <color name="WindowsBackground01">#136DB9</color>
+
+    <color name="colorPrimary_">#6A83A1</color>
+    <color name="colorTabSelectedText">#FF6C41</color>
+
+
+
+
+
     <color name="statusColor">@color/royalblue</color>
     <color name="white">#FFFFFF</color> <!--白色 -->
     <color name="ivory">#FFFFF0</color> <!--象牙色 -->
