@@ -42,6 +42,10 @@ public class MenuActivity extends BaseActivity {
         ButterKnife.bind(this);
         initViews();
         initEvents();
+
+        /*
+        媳妇，辛苦你了。我爱你！
+         */
     }
 
 
@@ -126,6 +130,7 @@ public class MenuActivity extends BaseActivity {
             }
 
         });
+        mViewPager.setOffscreenPageLimit(5);
 
         mTabLayout.setupWithViewPager(mViewPager);
 
