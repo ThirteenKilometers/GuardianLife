@@ -10,11 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!--账号密码登录界面-->
         <activity android:name=".login.LoginActivity"
@@ -22,9 +17,20 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
           <intent-filter>
-              <action android:name=" ac57.com.application1.login.LoginActivity"></action>
+              <action android:name="ac57.com.application1.login.LoginActivity"></action>
                 <category android:name="android.intent.category.DEFAULT"/>
           </intent-filter>
+        </activity>
+
+        <activity android:name=".test.TestActivity">
+
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

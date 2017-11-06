@@ -1,6 +1,7 @@
 package ac57.com.application1.mvp;
 
 import yh.com.library.base.mvp.BaseMVPModel;
+import yh.com.library.base.mvp.BaseMVPPresenter;
 
 /**
  * <br/>
@@ -10,4 +11,7 @@ import yh.com.library.base.mvp.BaseMVPModel;
  */
 
 public class LoginMoudel extends BaseMVPModel {
+    public LoginMoudel(BaseMVPPresenter mPresenter) {
+        super(mPresenter);
+    }
 }
