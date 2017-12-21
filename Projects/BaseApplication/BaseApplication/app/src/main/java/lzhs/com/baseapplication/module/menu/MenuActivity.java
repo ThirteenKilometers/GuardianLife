@@ -42,10 +42,6 @@ public class MenuActivity extends BaseActivity {
         ButterKnife.bind(this);
         initViews();
         initEvents();
-
-        /*
-        媳妇，辛苦你了。我爱你！
-         */
     }
 
 

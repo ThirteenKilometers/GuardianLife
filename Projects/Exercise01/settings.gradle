@@ -1,1 +1,1 @@
-include ':app', ':annotationdemo'
+include ':app', ':annotationdemo', ':sempledeggerdemo', ':coordinatordemo'

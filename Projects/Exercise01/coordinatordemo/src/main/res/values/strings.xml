@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CoordinatorDemo</string>
+    <string name="appbar_overrid_behavior" >lzhs.com.coordinatordemo.behaviors.AppBarLayoutOverScrollViewBehavior</string>
+    <string name="string_text_content">RTP :(Real-time Transport Protocol)是用于Internet上针对多媒体数据流的一种传输层协议.RTP协议和RTP控制协议RTCP一起使用，而且它是建立在UDP协议上的 RTCP:Real-time Transport Control Protocol或RTP Control Protocol或简写RTCP）实时传输控制协议,是实时传输协议（RTP）的一个姐妹协议 RTP协议和RTP控制协议RTCP一起使用，而且它是建立在UDP协议上的 RTSP:（Real Time Streaming Protocol）是用来控制声音或影像的多媒体串流协议,RTSP提供了一个可扩展框架，使实时数据，如音频与视频的受控、点播成为可能。 数据源包括现场数据与存储在剪辑中的数据。该协议目的在于控制多个数据发送连接，为选择发送通道，如UDP、多播UDP与TCP提供途径，并为选择基于RTP上发送机制提供方法 传输时所用的网络通讯协定并不在其定义的范围内，服务器端可以自行选择使用TCP或UDP来传送串流内容，比较能容忍网络延迟  RTP不像http和ftp可完整的下载整个影视文件，它是以固定的数据率在网络上发送数据，客户端也是按照这种速度观看影视文件，当影视画面播放过后，就不可以再重复播放，除非重新向服务器端要求数据。 RTSP与RTP最大的区别在于：RTSP是一种双向实时数据传输协议，它允许客户端向服务器端发送请求，如回放、快进、倒退等操作。当然，RTSP可基于RTP来传送数据，还可以选择TCP、UDP、组播UDP等通道来发送数据，具有很好的扩展性。它时一种类似与http协议的网络应用层协议</string>
+    <string name="appbar_circleimageview_behavior" >lzhs.com.coordinatordemo.behaviors.CircleImageInUsercBehavior</string>
+</resources>
