@@ -1,6 +1,9 @@
 package lzhs.com.virtualdemo;
 
 import android.app.Application;
+import android.content.Context;
+
+import com.didi.virtualapk.PluginManager;
 
 /**
  * <br/>
@@ -9,4 +12,9 @@ import android.app.Application;
  * 邮箱：1050629507@qq.com
  */
 public class BaseApplication extends Application {
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        PluginManager .getInstance(base).init();
+    }
 }
