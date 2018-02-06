@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="mDeclarInfo01"
+            type="lzhs.com.virtualdemo.declare_info.BeanDeclarInfo" />
+
+        <import type="android.view.View" />
+
+        <import type="lzhs.com.virtualdemo.declare_info.utils.Utils" />
+        <variable
+            name="mClick"
+            type="lzhs.com.virtualdemo.declare_info.ActivityDeclareInfo.ClickLisenter"/>
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                style="@style/ImageStyle01"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginRight="11dp"
+                                imageUrl="@{mDeclarInfo01.activityCategoryIcon}"
+                                tools:src="@mipmap/ic_launcher" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@{mDeclarInfo01.beneficiaryCategoryName}"
+                                android:textColor="#545D65"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                tools:text="李明亮的宴会活动" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewHint01"
+                                android:text="活动编号" />
+
+                            <TextView
+                                style="@style/TextViewHint02"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@{mDeclarInfo01.activityCode}"
+                                tools:text="HD55452120033521" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="19dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewHint01"
+                                android:text="活动名称" />
+
+                            <TextView
+                                style="@style/TextViewHint02"
+                                android:text="@{mDeclarInfo01.activityName}"
+                                android:textColor="@android:color/black"
+                                tools:text="红花郎郎酒宴会活动" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="19dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewHint01"
+                                android:text="活动标准" />
+
+                            <TextView
+                                style="@style/TextViewHint02"
+                                android:text="@{mDeclarInfo01.standardName}"
+                                android:textColor="@android:color/black"
+                                tools:text="小型宴会" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="19dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewHint01"
+                                android:text="活动产品" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/draw_declare_info_pro"
+                                android:orientation="vertical"
+                                android:padding="11dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        style="@style/ImageStyle01"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@mipmap/ic_launcher" />
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="7dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/TextViewHint01"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:textColor="@android:color/black"
+                                            tools:text="百年老店酒淡雅 500ml 52°" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentBottom="true"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:textColor="#FA641F"
+                                            android:textSize="11dp"
+                                            tools:text="烟酒店 渠道" />
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="19dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewHint01"
+                                android:text="活动时间" />
+
+                            <TextView
+                                style="@style/TextViewHint02"
+                                android:text="@{mDeclarInfo01.activityStartTime+` - `+mDeclarInfo01.activityEndTime}"
+                                android:textColor="@android:color/black"
+                                tools:text="2017-12-26 10:00" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="19dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextViewHint01"
+                                android:text="活动地点" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="@{mDeclarInfo01.address}"
+                                    android:textColor="@android:color/black"
+                                    tools:text="四川省成都武侯区天府三街福年广场T1-105" />
+
+                                <!--<com.baidu.mapapi.map.TextureMapView-->
+                                <!--latitude="@{mDeclarInfo01.latitude}"-->
+                                <!--longitude="@{mDeclarInfo01.longitude}"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="100dp"-->
+                                <!--android:layout_marginTop="8dp" />-->
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:layout_marginTop="8dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="19dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:text="宴会类型" />
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:textColor="@android:color/black"
+                                    tools:text="婚宴" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="#EFEFF4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="申报信息"
+                                android:textColor="#545D65"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="21dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:text="申报部门" />
+
+                                <TextView
+                                    style="@style/TextViewHint02"
+                                    android:text="@{mDeclarInfo01.lnitiatorDepartmentName}"
+                                    tools:text="成都办事处" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="21dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:text="    申报者" />
+
+                                <TextView
+                                    style="@style/TextViewHint02"
+                                    android:text="@{mDeclarInfo01.lnitiatorName}"
+                                    tools:text="周丽丽" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="21dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:text="岗位编码" />
+
+                                <TextView
+                                    style="@style/TextViewHint02"
+                                    android:text="@{mDeclarInfo01.lnitiatorPostCode}"
+                                    tools:text="D580021540156" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="21dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/TextViewHint01"
+                                    android:text="申报时间" />
+
+                                <TextView
+                                    style="@style/TextViewHint02"
+                                    android:text="@{mDeclarInfo01.createTime}"
+                                    tools:text="2017-12-24 12:39" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="21dp"
+                            android:background="#EFEFF4" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mViewBeneficParam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="21dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="审批流程"
+                        android:textColor="#777E8A"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true" />
+
+                        <ImageView
+                            style="@style/ImageStyle01"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#545D65"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:text="刘小花*审批中" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="#EFEFF4" />
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            app:layout_behavior="lzhs.com.virtualdemo.declare_info.behaviors.BottomNavigationBehavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="@{mClick}"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ImageStyle01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="催办"
+                        android:textColor="#545D65"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="@{mClick}"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ImageStyle01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="撤销"
+                        android:textColor="#545D65"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="@{mClick}"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/ImageStyle01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="重新提交"
+                        android:textColor="#545D65"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>

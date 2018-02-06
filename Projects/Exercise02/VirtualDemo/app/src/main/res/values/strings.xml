@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VirtualDemo</string>
+    <string name="string_benef02">次要受益者</string>
+    <string name="string_benef01">主要受益者</string>
+</resources>

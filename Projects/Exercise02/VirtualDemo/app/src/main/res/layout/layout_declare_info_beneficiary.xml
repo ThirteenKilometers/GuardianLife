@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="mBeneficiary"
+            type="lzhs.com.virtualdemo.declare_info.BeanDeclarInfoBeneficiary" />
+
+        <import type="android.view.View" />
+
+        <import type="lzhs.com.virtualdemo.declare_info.utils.Utils" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@{mBeneficiary.beneficiaryIsMain==1 ? @drawable/draw_declare_info_benef :@drawable/draw_declare_info_benef_}"
+                    android:gravity="center"
+                    android:text="益"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:background="@drawable/draw_declare_info_benef" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{mBeneficiary.beneficiaryIsMain == 1 ? @string/string_benef01 : @string/string_benef02}"
+                    android:textColor="#545D65"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:text="主要受益者" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    app:trimText="@{mBeneficiary.beneficiaryTypeName}"
+                    tools:text="    消费者" />
+
+                <TextView
+                    style="@style/TextViewHint02"
+                    android:text="@{mBeneficiary.beneficiaryName}"
+                    tools:text="王大壮" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="联系方式" />
+
+                <TextView
+                    style="@style/TextViewHint02"
+                    android:layout_weight="1"
+                    android:text="@{mBeneficiary.beneficiaryPhone}"
+                    tools:text="18655443287" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="预计奖励" />
+
+                <TextView
+                    style="@style/TextViewHint02"
+                    app:richText="@{mBeneficiary.amount + ``}"
+                    app:unitText="@{mBeneficiary.cashUnitStart + ``}"
+                    tools:text="￥1500 元 (壹仟伍佰元整）" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal"
+                android:visibility="@{mBeneficiary.type==1?View.GONE:View.VISIBLE}">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="申报数量" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/TextViewHint02"
+                        android:text="@{mBeneficiary.num+mBeneficiary.cashUnitEnd}"
+                        tools:text="100 瓶" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产品码"
+                            android:textColor="#3284F3"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal"
+                android:visibility="@{mBeneficiary.type==1?View.GONE:View.VISIBLE}">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="活动标准" />
+
+                <TextView
+                    style="@style/TextViewHint02"
+                    app:richText="@{mBeneficiary.price + ``}"
+                    app:unitText="@{mBeneficiary.cashUnit + ``}"
+                    tools:text="￥20 元/瓶" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="支付方式" />
+
+                <TextView
+                    style="@style/TextViewHint02"
+                    android:text="@{mBeneficiary.paymentWayId==1? mBeneficiary.staffName:mBeneficiary.staffName}"
+                    tools:text="大连非得酒业有限公司" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/draw_declare_info_text01"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="3dp"
+                    android:text="@{mBeneficiary.paymentWayName}"
+                    android:textColor="#2D5389"
+                    android:textSize="11sp"
+                    tools:text="垫付" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="费用来源" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewHint02"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@{mBeneficiary.costPoolName}"
+                        tools:text="红花郎郎酒宴会活动额度" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="13dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="5dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产品码"
+                            android:textColor="#3284F3"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal"
+                android:visibility="@{mBeneficiary.type==1?View.GONE:View.VISIBLE}">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="实际奖励" />
+
+                <TextView
+                    style="@style/TextViewHint02"
+                    app:richText="@{mBeneficiary.expectAmount+``+mBeneficiary.writeOffUnitEnd}"
+                    app:unitText="@{mBeneficiary.writeOffType+``}"
+                    tools:text="￥1500 元 [现金折扣]" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewHint01"
+                    android:text="奖励标准" />
+
+                <TextView
+
+                    style="@style/TextViewHint02"
+                    app:richText="@{mBeneficiary.writeOffNum+``+mBeneficiary.writeOffUnit}"
+                    app:unitText="@{mBeneficiary.writeOffType}"
+                    tools:text="￥20 元 [现金折扣]/瓶" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="21dp"
+            android:background="#EFEFF4" />
+    </LinearLayout>
+
+
+</layout>
